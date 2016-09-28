@@ -1,0 +1,15 @@
+;  (:action CARRY ; (PREDICATE_2_NAME [?A1 ?A2 ... ?AN])
+;        [:parameters (?robot - robot ?small1 - small_object)]
+;        [:precondition (and(adjacent ?r1 ?r2 - room)(at ?robot - robot ?r1 - room))  ]
+;        [:effect (at ?robot - robot ?r2 - room)]
+;  )
+
+
+;  (:action ACTION_1_NAME
+;    [:parameters (?P1 ?P2 ... ?PN)]
+;    [:precondition PRECOND_FORMULA]
+;    [:effect EFFECT_FORMULA]
+;   )
+
+;  (:action ACTION_2_NAME
+  ;  ...)
