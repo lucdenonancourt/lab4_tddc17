@@ -1,18 +1,25 @@
-(define (domain Shakey)
-  (:requirements :strips :typing)
-  
+(define (domain shakey)
+  (:requirements :strips)
+
+  (:types
+		room
+		box
+		door
+    wide-door
+		item)
+
   (:predicates
-        (adjacent ?r1 ?r2)
-		(at ?robot ?room)
-        (hold1 ?robot ?small1)
-        (hold2 ?robot ?small1 ?small2)
-        (ontop ?robot ?box)        
+        (adjacent ?r1 ?r2 - room)
+	      (at ?robot - robot ?room - room)
+        ;(hold ?robot - robot ?small1 - item)
+        ;(hold2 ?robot - robot ?small1 ?small2 - item)
+        ;(ontop ?robot - robot ?box - box)
 	)
 
   (:action move
-        :parameters (?robot ?r1 ?r2)
-        :precondition (and(adjacent ?r1 ?r2)(at ?robot ?r1))
-        :effect (and(at ?robot ?r2)(not (at ?robot ?r1)))
+        :parameters (?robot - robot ?from ?to - room)
+        :precondition (and(adjacent ?from ?to)(at ?robot ?from))
+        :effect (and(at ?robot ?to)(not (at ?robot ?from)))
   )
 
   )

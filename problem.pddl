@@ -1,10 +1,15 @@
-(define (problem Fuuu)
+(define (problem problem1)
   (:domain Shakey)
-  (:objects robot room1 room2)
-  (:init 
-		(at robot1 room1)
+  (:objects
+    robot - robot
+    room1 room2 room3 - room
+    )
+
+  (:init
+		(at robot room1)
 		(adjacent room1 room2)
-		(adjacent room2 room3)
+    (adjacent room2 room3)
 	)
-  (:goal (at robot1 room2))
+
+  (:goal (at robot room3))
   )
