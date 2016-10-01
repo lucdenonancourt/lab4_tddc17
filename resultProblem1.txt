@@ -1,0 +1,40 @@
+
+ff: parsing domain file
+domain 'SHAKEY' defined
+ ... done.
+ff: parsing problem file
+problem 'PROBLEM1' defined
+ ... done.
+
+
+
+Cueing down from goal distance:    7 into depth [1]
+                                   6            [1][2][3]
+                                   5            [1][2]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: MOVE ROBOT ROOM1 ROOM2
+        1: MOVE_BOX ROBOT ROOM2 ROOM3 BOX1
+        2: SWITCH_LIGHT_ON ROBOT ROOM3 BOX1
+        3: MOVE_BOX ROBOT ROOM3 ROOM2 BOX1
+        4: MOVE ROBOT ROOM2 ROOM3
+        5: GRAB_ITEM ROBOT GRIP2 ROOM3 ITEM1
+        6: MOVE ROBOT ROOM3 ROOM2
+        7: MOVE_BOX ROBOT ROOM2 ROOM1 BOX1
+        8: SWITCH_LIGHT_ON ROBOT ROOM1 BOX1
+        9: RELEASED_ITEM ROBOT GRIP2 ROOM1 ITEM1
+     
+
+time spent:    0.00 seconds instantiating 18 easy, 8 hard action templates
+               0.00 seconds reachability analysis, yielding 21 facts and 26 actions
+               0.00 seconds creating final representation with 21 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 23 states, to a max depth of 3
+               0.00 seconds total time
+
